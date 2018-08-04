@@ -15,11 +15,12 @@ dotnet_csproj:
   informational_version: '{version}'
 before_build:
 - ps: >-
-    cd ClientApp
-    yarn
-    yarn webpack --config webpack.config.vendor.js
-    yarn webpack
-    dotnet restore
+    cd src\ClientApp;
+    yarn;
+    yarn webpack --config webpack.config.vendor.js;
+    yarn webpack;
+    cd ..\..;
+    dotnet restore;
 build:
   project: AgodaWokshop.csproj
   publish_aspnet_core: true

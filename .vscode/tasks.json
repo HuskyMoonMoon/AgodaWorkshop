@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/AgodaWorkshop.csproj"
+                "${workspaceFolder}/src/AgodaWorkshop.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
