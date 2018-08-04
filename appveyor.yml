@@ -15,14 +15,14 @@ dotnet_csproj:
   informational_version: '{version}'
 before_build:
 - ps: >-
-    cd src\ClientApp;
-    yarn;
-    yarn webpack --config webpack.config.vendor.js;
-    yarn webpack;
-    cd ..\..;
-    dotnet restore;
+    cd TechAtAgoda\src
+    yarn install
+    yarn webpack --config webpack.config.vendor.js
+    yarn webpack
+    cd ..
+    dotnet restore
 build:
-  project: AgodaWokshop.csproj
+  project: TechAtAgoda\TechAtAgoda.sln
   publish_aspnet_core: true
   verbosity: minimal
 notifications:
